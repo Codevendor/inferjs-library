@@ -6,7 +6,11 @@
 [arrow]: https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true
 [library-docs]: https://github.com/Codevendor/inferjs-library/
 [library-issues]: https://github.com/Codevendor/inferjs-library/issues
-
+[compiler-docs]: https://github.com/Codevendor/inferjs-compiler/
+[compiler-issues]: https://github.com/Codevendor/inferjs-compiler/issues
+[InferUnhandledError]: https://github.com/Codevendor/inferjs-library/blob/main/src/errors/infer-unhandled-error.mjs
+[InferTypeError]: https://github.com/Codevendor/inferjs-library/blob/main/src/errors/infer-type-error.mjs
+[InferExpectError]: https://github.com/Codevendor/inferjs-library/blob/main/src/errors/infer-expect-error.mjs 
 
 ![InferJS Library][logo]
 
@@ -23,7 +27,8 @@ With this library, you can also enable extended type checking and narrow down yo
 ### Built With
 
 * [JSDoc Version 3+](https://jsdoc.app/)
-* [Node.js Version 18+](https://nodejs.org/)
+* [Node.js Version 12+](https://nodejs.org/)
+* [NPM Version 5+](https://www.npmjs.com/)
 * [Webpack Version 5+](https://webpack.js.org/)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -31,18 +36,31 @@ With this library, you can also enable extended type checking and narrow down yo
 <!-- GETTING STARTED -->
 ## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Installation
 
-Start by cloning the [**InferJS**][inferjs] github repository.
-1. Clone the repo
+To install the latest version of [**InferJS-Library**][inferjs-library] locally with `npm`:
+#### Install: [Locally]()
 ```sh
-git clone https://github.com/Codevendor/inferjs.git
+npm install inferjs-library
 ```
 
-## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Prerequisites
+#### Install: [Globally]()
+```sh
+npm install -g inferjs-library
+```
 
-Included in the repo is a folder named `dist`. It contains the latest precompiled minified versions of both [**InferJS-Library**][inferjs-library] and [**InferJS-Compiler**][inferjs-compiler]. If using the [**InferJS-Library**][inferjs-library] from the web, please select correct Javascript inclusion type and version: (`esmodule`, `commonjs`, `script`, `json`).
+**_Optional_**: If you would like to download the repo source code with `git`:
+```sh
+git clone https://github.com/Codevendor/inferjs-library.git
+```
 
-#### (Optional) - Install Webpack
-If you would like to build your own minified copy of [**InferJS-Library**][inferjs-library] or [**InferJS-Compiler**][inferjs-compiler], you will need to install **Webpack version 5+** with the following commands. The commands need to be run from within the projects folders where the `package.json` files reside. Or you can install them globally with the `-g` identifier.
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Browser Version Instructions
+
+If you would like to use the [InferJS-Library] from the browser, please select a `precompiled/minified` version and module type from the `dist` folder. There are 3 types of modules supported (`esmodule`,`commonjs`,`script`). The `latest` folder contains the latest version of the library.  
+
+### _Optional_: Compiling the Latest Version of [InferJS-Library][inferjs-library]
+If you are missing the `dist` folder or would like to compile the latest version, follow the steps below.
+
+#### Install Webpack
+To build yourself you will need to install **Webpack version 5+** with the following commands. The commands need to be run from where the `package.json` is located. Or you can install them globally with the `-g` identifier.
 
 #### Webpack Latest Install 
 ```sh
@@ -57,48 +75,40 @@ npm install -g --save-dev webpack
 npm install -g --save-dev webpack-cli
 ```
 
-The latest version of **webpack 5** automatically installs **terser-webpack-plugin** with it. If it doesn't you will need to install it as well in the projects folder. Terser is used for minimizing/compressing code for use in browser.
+The latest version of **webpack 5+** automatically installs the **terser-webpack-plugin** with it. If it doesn't, you will need to install it as well, from where the `package.json` is located. The `Terser` plugin is used for `minimizing/compressing` the library code for use in the browser.
 
-#### Terser Webpack Plugin (optional if webpack 5+)
+#### _Optional_ - Terser Webpack Plugin 
+- Required if webpack 4-
 ```sh
 npm install terser-webpack-plugin --save-dev
 ```
 
-
-## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Building & Installation
-
-Depending upon your needs, you will need to follow the instructions below, to properly install and use the library/compiler.
-
-### (Optional) - InferJS-Library - Build
-(Optional) - Prebuilt [InferJS-Library][inferjs-library] will be automatically included in the repo under the `dist` folder. If you would like to build the library yourself in **NodeJS**, use the following `npm` command from within the [projects/inferjs-library](https://github.com/Codevendor/inferjs-library) folder.
+After the node modules under `devDependencies` are installed, you can run the build process from where the `package.json` is located.
 ```sh
 npm run build
 ```
-This will build the latest version of the [**InferJS-Library**][inferjs-library] in the `dist` folder. Make sure to have **webpack**, **webpack cli**, and **terser-webpack-plugin** installed first, before running the `npm` command above.
 
-### InferJS-Compiler - Build
-Building the [**InferJS-Compiler**][inferjs-compiler] is essential for making the library work. It creates the [**InferObject**]() file, that is used in the type checking of the library. To build the latest compiler and link it globally, use the following command within the [projects/inferjs-compiler](https://github.com/Codevendor/inferjs-library/tree/main/projects/inferjs-compiler) folder.
-```sh
-npm run build
-```
-Once built and linked globally, you can call it directly with the **InferJSCompiler** command.
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Compiling InferObject Files 
 
-### Browser - Build
-Copy one of the minimized `inferjs-{version}.min.js` from the `dist` folder to your website. Copy the pre-compiled [**InferObject**]() file to your website, that was created with the [**InferJS-Compiler**][inferjs-compiler]. 
+In order to use the [**InferJS-Library**][inferjs-library], you will need to compile an [**InferObject**][infer-object] with the [**InferJS-Compiler**][inferjs-compiler]. 
 
-Add both to your webpage for type checking. You only need to recompile with the [**InferJS-Compiler**][inferjs-compiler], if you change your **JSDoc** multi-line comments, `@param`, `@type`, `@inferid` or `@infer` tags. 
-
+For more information on installing the [**InferJS-Compiler**][inferjs-compiler] and its usage [click here][inferjs-compiler]. 
 
 
 <!-- USAGE EXAMPLES -->
 ## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Usage
+
+### Browser - Usage Instructions
+Copy one of the minimized `inferjs-{version}.min.js` from the `dist` folder to your website. Copy the pre-compiled [**InferObject**]() file to your website, that was created with the [**InferJS-Compiler**][inferjs-compiler]. 
+
+Add both to your webpage for type checking. You only need to recompile with the [**InferJS-Compiler**][inferjs-compiler], if you change your **JSDoc** multi-line comments, `@param`, `@type`, `@inferid` or `@infer` tags. 
 
 Below are examples for using [**InferJS-Library**][inferjs-library] in your code.
 
 #### Brower ESModule Import Example - Client side
 ```js
 <script type="module">
-  import { InferObject } from "./inferobject.mjs";
+  import { InferObject } from "./inferobject.js";
   import { InferJS } from "./esmodule/inferjs-{version}.min.js";
   const inferjs = new InferJS(InferObject);
 </script>
@@ -113,14 +123,14 @@ const inferjs = new InferJS(InferObject);
 </script>
 ```
 
-#### NodeJs ESModule Import - Server Side
+#### Node.js ESModule Import - Server Side
 ```js
-import { InferObject } from "./inferobject.mjs";
+import { InferObject } from "./inferobject.js";
 import { InferJS } from "./esmodule/inferjs-{version}.min.js";
 const inferjs = new InferJS(InferObject);
 ```
 
-#### NodeJs CommonJS Require - Server Side
+#### Node.js CommonJS Require - Server Side
 ```js
 const InferObject = require("./inferobject.js");
 const InferJS = require("./commonjs/inferjs-{version}.min.js");
@@ -347,9 +357,9 @@ In [**InferJS-Library**][inferjs-library] you have the option to throw or return
 
 | Exception Types | Description |
 | :-- | :-- |
-| [InferUnhandledError](https://github.com/Codevendor/inferjs-library/blob/main/projects/inferjs-library/src/errors/infer-unhandled-error.mjs) | For all errors unhandled by the **InferJS** library. |
-| [InferTypeError](https://github.com/Codevendor/inferjs-library/blob/main/projects/inferjs-library/src/errors/infer-type-error.mjs) | For all type errors created from the **JSDoc** tag `@param` `{type}` |
-| [InferExpectError](https://github.com/Codevendor/inferjs-library/blob/main/projects/inferjs-library/src/errors/infer-expect-error.mjs) | For all errors related to the custom **JSDoc** tag `@infer` and custom expectation rules. |
+| [InferUnhandledError][unhandled-error] | For all errors unhandled by the **InferJS** library. |
+| [InferTypeError][type-error] | For all type errors created from the **JSDoc** tag `@param` `{type}` |
+| [InferExpectError][expect-error] | For all errors related to the custom **JSDoc** tag `@infer` and custom expectation rules. |
 
 Below are examples of exception type responses from [**InferJS-Library**][inferjs-library].  
 
@@ -396,7 +406,7 @@ _For more examples, please refer to the [Documentation](https://inferjs.com)_
 
 
 
-See the [open issues](https://github.com/Codevendor/inferjs-library/issues) for a full list of proposed features (and known issues).
+See the [open issues][library-issues] for a full list of proposed features (and known issues).
 
 
 
@@ -432,7 +442,7 @@ Distributed under the **MIT** License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Support Related
  - [**InferJS-Library** Documentation][library-docs] - Information documentation for the **InferJS-Library**.
- - [**InferJS-Library** Issues][library-issues] - Direct all questions about the **InferJS-Library** here.
+ - [**InferJS-Library** Issues][library-issues] - Direct all questions about the **InferJS-Library**
 
 
 
