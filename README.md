@@ -106,7 +106,7 @@ Add both to your webpage for type checking. You only need to recompile with the 
 Below are examples for using [**InferJS-Library**][inferjs-library] in your code.
 
 #### Brower ESModule Import Example - Client side
-```js
+```html
 <script type="module">
   import { InferObject } from "./inferobject.js";
   import { InferJS } from "./esmodule/inferjs-{version}.min.js";
@@ -115,7 +115,7 @@ Below are examples for using [**InferJS-Library**][inferjs-library] in your code
 ```
 
 #### Browser JavaScript Script Tag Sync Example - Client Side
-```js
+```html
 <script src="./inferobject.js"></script>
 <script src="./script/inferjs-{version}.min.js"></script>
 <script>
