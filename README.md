@@ -1,23 +1,23 @@
+[inferjs]: https://github.com/Codevendor/inferjs
+[inferjs-library]: https://github.com/Codevendor/inferjs-library
+[inferjs-compiler]: https://github.com/Codevendor/inferjs-compiler
+[infer-object]: https://github.com/Codevendor/inferjs-library
+[logo]: https://github.com/Codevendor/inferjs-library/blob/main/assets/images/inferjs-logo.png?raw=true
+[arrow]: https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true
+[library-docs]: https://github.com/Codevendor/inferjs-library/
+[library-issues]: https://github.com/Codevendor/inferjs-library/issues
 
-<div id="top"></div>
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/Codevendor/inferjs">
-    <img src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/inferjs-logo.png?raw=true" alt="Logo" height="183px" width="443px" />
-  </a>
-</div>
-
+![InferJS Library][logo]
 
 <!-- ABOUT THE PROJECT -->
-## <img height="28" width="29" src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true" style="float:left;" />&nbsp;&nbsp;InferJS-Library: Overview
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Overview
 
-[**InferJS-Library**](https://github.com/Codevendor/inferjs-library) allows you to easily add runtime type checking by utilizing **JSDoc** multi-line comments in both client and server side **JavaScript**. The library is part of a bigger project named [**InferJS**](https://github.com/Codevendor/inferjs). 
+[**InferJS-Library**][inferjs-library] allows you to easily add runtime type checking by utilizing **JSDoc** multi-line comments in both client and server side **JavaScript**. The library is part of a bigger project named [**InferJS**][inferjs]. 
 
-[**InferJS**](https://github.com/Codevendor/inferjs) is provided with an  [**InferJS-Compiler**](https://github.com/Codevendor/inferjs-compiler). The compiler interprets your **JSDoc** comments from your source code and compiles them into an [**InferObject**]() file, that you can import into any **JavaScript** file. 
+[**InferJS**][inferjs] is provided with an [**InferJS-Compiler**][inferjs-compiler]. The compiler interprets your **JSDoc** comments from your source code and compiles them into an [**InferObject**][infer-object] file, that you can import into any **JavaScript** file. 
 
-With this library, you can also enable extended type checking and narrow down your data types with `@infer` expectation rules. Check out the examples below, to see how [**InferJS**](https://github.com/Codevendor/inferjs) can save you time and money from costly bugs through development and release.
+With this library, you can also enable extended type checking and narrow down your data types with `@infer` expectation rules. Check out the examples below, to see how [**InferJS**][inferjs] can save you time and money from costly bugs through development and release.
 
 
 ### Built With
@@ -29,20 +29,20 @@ With this library, you can also enable extended type checking and narrow down yo
 
 
 <!-- GETTING STARTED -->
-## <img height="28" width="29" src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true" style="float:left;" />&nbsp;&nbsp;InferJS-Library: Installation
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Installation
 
-Start by cloning the [**InferJS**](https://github.com/Codevendor/inferjs) github repository.
+Start by cloning the [**InferJS**][inferjs] github repository.
 1. Clone the repo
 ```sh
 git clone https://github.com/Codevendor/inferjs.git
 ```
 
-## <img height="28" width="29" src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true" style="float:left;" />&nbsp;&nbsp;InferJS-Library: Prerequisites
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Prerequisites
 
-Included in the repo is a folder named `dist`. It contains the latest precompiled minified versions of both [**InferJS-Library**](https://github.com/Codevendor/inferjs-library) and [**InferJS-Compiler**](https://github.com/Codevendor/inferjs-compiler). If using the [**InferJS-Library**](https://github.com/Codevendor/inferjs-library) from the web, please select correct Javascript inclusion type and version: (`esmodule`, `commonjs`, `script`, `json`).
+Included in the repo is a folder named `dist`. It contains the latest precompiled minified versions of both [**InferJS-Library**][inferjs-library] and [**InferJS-Compiler**][inferjs-compiler]. If using the [**InferJS-Library**][inferjs-library] from the web, please select correct Javascript inclusion type and version: (`esmodule`, `commonjs`, `script`, `json`).
 
 #### (Optional) - Install Webpack
-If you would like to build your own minified copy of [**InferJS-Library**](https://github.com/Codevendor/inferjs-library) or [**InferJS-Compiler**](https://github.com/Codevendor/inferjs-compiler), you will need to install **Webpack version 5+** with the following commands. The commands need to be run from within the projects folders where the `package.json` files reside. Or you can install them globally with the `-g` identifier.
+If you would like to build your own minified copy of [**InferJS-Library**][inferjs-library] or [**InferJS-Compiler**][inferjs-compiler], you will need to install **Webpack version 5+** with the following commands. The commands need to be run from within the projects folders where the `package.json` files reside. Or you can install them globally with the `-g` identifier.
 
 #### Webpack Latest Install 
 ```sh
@@ -65,35 +65,35 @@ npm install terser-webpack-plugin --save-dev
 ```
 
 
-## <img height="28" width="29" src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true" style="float:left;" />&nbsp;&nbsp;InferJS-Library: Building & Installation
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Building & Installation
 
 Depending upon your needs, you will need to follow the instructions below, to properly install and use the library/compiler.
 
 ### (Optional) - InferJS-Library - Build
-(Optional) - Prebuilt [InferJS-Library](https://github.com/Codevendor/inferjs-library) will be automatically included in the repo under the `dist` folder. If you would like to build the library yourself in **NodeJS**, use the following `npm` command from within the [projects/inferjs-library](https://github.com/Codevendor/inferjs-library) folder.
+(Optional) - Prebuilt [InferJS-Library][inferjs-library] will be automatically included in the repo under the `dist` folder. If you would like to build the library yourself in **NodeJS**, use the following `npm` command from within the [projects/inferjs-library](https://github.com/Codevendor/inferjs-library) folder.
 ```sh
 npm run build
 ```
-This will build the latest version of the [**InferJS-Library**](https://github.com/Codevendor/inferjs-library) in the `dist` folder. Make sure to have **webpack**, **webpack cli**, and **terser-webpack-plugin** installed first, before running the `npm` command above.
+This will build the latest version of the [**InferJS-Library**][inferjs-library] in the `dist` folder. Make sure to have **webpack**, **webpack cli**, and **terser-webpack-plugin** installed first, before running the `npm` command above.
 
 ### InferJS-Compiler - Build
-Building the [**InferJS-Compiler**](https://github.com/Codevendor/inferjs-compiler) is essential for making the library work. It creates the [**InferObject**]() file, that is used in the type checking of the library. To build the latest compiler and link it globally, use the following command within the [projects/inferjs-compiler](https://github.com/Codevendor/inferjs-library/tree/main/projects/inferjs-compiler) folder.
+Building the [**InferJS-Compiler**][inferjs-compiler] is essential for making the library work. It creates the [**InferObject**]() file, that is used in the type checking of the library. To build the latest compiler and link it globally, use the following command within the [projects/inferjs-compiler](https://github.com/Codevendor/inferjs-library/tree/main/projects/inferjs-compiler) folder.
 ```sh
 npm run build
 ```
 Once built and linked globally, you can call it directly with the **InferJSCompiler** command.
 
 ### Browser - Build
-Copy one of the minimized `inferjs-{version}.min.js` from the `dist` folder to your website. Copy the pre-compiled [**InferObject**]() file to your website, that was created with the [**InferJS-Compiler**](https://github.com/Codevendor/inferjs-compiler). 
+Copy one of the minimized `inferjs-{version}.min.js` from the `dist` folder to your website. Copy the pre-compiled [**InferObject**]() file to your website, that was created with the [**InferJS-Compiler**][inferjs-compiler]. 
 
-Add both to your webpage for type checking. You only need to recompile with the [**InferJS-Compiler**](https://github.com/Codevendor/inferjs-compiler), if you change your **JSDoc** multi-line comments, `@param`, `@type`, `@inferid` or `@infer` tags. 
+Add both to your webpage for type checking. You only need to recompile with the [**InferJS-Compiler**][inferjs-compiler], if you change your **JSDoc** multi-line comments, `@param`, `@type`, `@inferid` or `@infer` tags. 
 
 
 
 <!-- USAGE EXAMPLES -->
-## <img height="28" width="29" src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true" style="float:left;" />&nbsp;&nbsp;InferJS-Library: Usage
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Usage
 
-Below are examples for using [**InferJS-Library**](https://github.com/Codevendor/inferjs-library) in your code.
+Below are examples for using [**InferJS-Library**][inferjs-library] in your code.
 
 #### Brower ESModule Import Example - Client side
 ```js
@@ -127,7 +127,7 @@ const InferJS = require("./commonjs/inferjs-{version}.min.js");
 const inferjs = new InferJS(InferObject);
 ```
 
-There are many ways to utilize the [**InferJS-Library**](https://github.com/Codevendor/inferjs-library). The example above, imports in the pre-compiled [**InferObject**]() file that was created with the [**InferJS-Compiler**](https://github.com/Codevendor/inferjs-compiler). Intialize the [**InferJS-Library**](https://github.com/Codevendor/inferjs-library) class with the [**InferObject**]() file you want to use.
+There are many ways to utilize the [**InferJS-Library**][inferjs-library]. The example above, imports in the pre-compiled [**InferObject**]() file that was created with the [**InferJS-Compiler**][inferjs-compiler]. Intialize the [**InferJS-Library**][inferjs-library] class with the [**InferObject**]() file you want to use.
 ```js
 // Intialize through constructor
 const inferjs = new InferJS(InferObject);
@@ -137,7 +137,7 @@ const inferjs = new InferJS();
 inferjs.inferObject = InferObject;
 ```
 
-Once the [**InferJS-Library**](https://github.com/Codevendor/inferjs-library) and [**InferObject**]() file are included at the top of your file you can then utilize the type checking features. Below is an example of how to create a **JSDoc** multi-line comment for type checking.
+Once the [**InferJS-Library**][inferjs-library] and [**InferObject**]() file are included at the top of your file you can then utilize the type checking features. Below is an example of how to create a **JSDoc** multi-line comment for type checking.
 
 #### Custom JSDoc Multiline Comment with Custom Infer Expectations
 
@@ -162,7 +162,7 @@ foo('test', 1234, true);
 ```
 
 
-## <img height="28" width="29" src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true" style="float:left;" />&nbsp;&nbsp;InferJS-Library: Type Checking with JSDoc @param
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Type Checking with JSDoc @param
 
 The **JSDoc** tag `@param` below specifies a method's parameter type(s), name and description.
 #### Fomart for [@param](): 
@@ -183,7 +183,7 @@ The **JSDoc** tag `@param` below specifies a method's parameter type(s), name an
  */
 ```
 
-[**InferJS-Library**](https://github.com/Codevendor/inferjs-library) reads the precompiled [**InferObject**]() file 
+[**InferJS-Library**][inferjs-library] reads the precompiled [**InferObject**]() file 
 and uses it to process all type checking and inferred expectations. 
 
 Below is a list of `standard` and `extended types` that can be checked:
@@ -207,9 +207,9 @@ Below is a list of `standard` and `extended types` that can be checked:
 | ["_functionName_"]() | A function name: `fooFunction` |
 | ["_errorName_"]() | An error type: `Error` or `TypeError` or `errorName`  |
 
-## <img height="28" width="29" src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true" style="float:left;" />&nbsp;&nbsp;InferJS-Library: Expectation Checking with Tag [@infer]()
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Expectation Checking with Tag [@infer]()
 
-[**InferJS-Library**](https://github.com/Codevendor/inferjs-library) also allows for extended type checking with the custom `@infer` tag. Add one or multiple `@infer` tags to any parameter type. This will allow for narrowing your types down through expectations. 
+[**InferJS-Library**][inferjs-library] also allows for extended type checking with the custom `@infer` tag. Add one or multiple `@infer` tags to any parameter type. This will allow for narrowing your types down through expectations. 
 
 Below is an simple example of `@infer`:
 #### Fomart for [@infer](): 
@@ -232,7 +232,7 @@ The `@infer` tag is so versatile you can attach it to multiple types in a group 
  */
 ```
 
-## <img height="28" width="29" src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true" style="float:left;" />&nbsp;&nbsp;InferJS-Library: Tag [@infer]() Expectation Types
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Tag [@infer]() Expectation Types
 
 There are many extended expectation types for narrowing your types down with your `@infer` tags.
 
@@ -297,9 +297,9 @@ Below is a list of common rule expectation types:
 | [ULONG]() | ^ |
 
 
-## <img height="28" width="29" src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true" style="float:left;" />&nbsp;&nbsp;InferJS-Library: Linking with Tag [@inferid]()
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Linking with Tag [@inferid]()
 
-The tag `@inferid` is a unique identifier for linking [**InferJS-Library**](https://github.com/Codevendor/inferjs-library) behind the scenes. It is required for each `method`, `property` or `field`, you would like to check. 
+The tag `@inferid` is a unique identifier for linking [**InferJS-Library**][inferjs-library] behind the scenes. It is required for each `method`, `property` or `field`, you would like to check. 
 
 This special tag, allows code to still work, while **JavaScript** is `compressed/minified` or `obfuscated`. All **Infers** are stored in a precompiled **InferObject** file. This makes it easy to write in your static data types and not have to worry about type checking them during **JavaScript Runtime** execution. 
 
@@ -315,12 +315,12 @@ Below is an example of `@inferid`:
  */
 ```
 
-## <img height="28" width="29" src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true" style="float:left;" />&nbsp;&nbsp;InferJS-Library: Running InferJS Checks with Method [check()]()
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Running InferJS Checks with Method [check()]()
 
-To check all your types and expectations, you need to call the [**InferJS-Library**](https://github.com/Codevendor/inferjs-library) method `check()`. It needs to be added at the beginning of each method(s) starting closure or below each variable you would like to check.
+To check all your types and expectations, you need to call the [**InferJS-Library**][inferjs-library] method `check()`. It needs to be added at the beginning of each method(s) starting closure or below each variable you would like to check.
 
 Below is the overload signature for the method `check()`:
-| Method Signature for [**InferJS-Library**](https://github.com/Codevendor/inferjs-library): check() |
+| Method Signature for [**InferJS-Library**][inferjs-library]: check() |
 | :-- |
 | **check** (&nbsp;inferId: [_@inferid_](),&nbsp;&nbsp;args: [_arguments_](),&nbsp;&nbsp;returnException: [_boolean =_]()`false`&nbsp;) |
 | _Description_: Type checks all parameters in arguments list and either returns or throws exception.  |
@@ -341,9 +341,9 @@ var a = 'foo';
 inferjs.check('Your - @inferid', a);  
 ```
 
-## <img height="28" width="29" src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true" style="float:left;" />&nbsp;&nbsp;InferJS Library: Type Checking Errors
+## ![Heading][arrow]&nbsp;&nbsp;InferJS Library: Type Checking Errors
 
-In [**InferJS-Library**](https://github.com/Codevendor/inferjs-library) you have the option to throw or return `exception` from the `check()` method. Thrown errors come with tons of information for debugging your types and expectations. 
+In [**InferJS-Library**][inferjs-library] you have the option to throw or return `exception` from the `check()` method. Thrown errors come with tons of information for debugging your types and expectations. 
 
 | Exception Types | Description |
 | :-- | :-- |
@@ -351,7 +351,7 @@ In [**InferJS-Library**](https://github.com/Codevendor/inferjs-library) you have
 | [InferTypeError](https://github.com/Codevendor/inferjs-library/blob/main/projects/inferjs-library/src/errors/infer-type-error.mjs) | For all type errors created from the **JSDoc** tag `@param` `{type}` |
 | [InferExpectError](https://github.com/Codevendor/inferjs-library/blob/main/projects/inferjs-library/src/errors/infer-expect-error.mjs) | For all errors related to the custom **JSDoc** tag `@infer` and custom expectation rules. |
 
-Below are examples of exception type responses from [**InferJS-Library**](https://github.com/Codevendor/inferjs-library/).  
+Below are examples of exception type responses from [**InferJS-Library**][inferjs-library].  
 
 #### > InferTypeError Example:
 ```console
@@ -383,7 +383,7 @@ _For more examples, please refer to the [Documentation](https://inferjs.com)_
 
 
 <!-- ROADMAP -->
-## <img height="28" width="29" src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true" style="float:left;" />&nbsp;&nbsp;InferJS-Library: Roadmap
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Roadmap
 - [[ April 2023 ]()] - Create a plan for text localization with the **InferJS-Library** repo.
 - [[ March 2023 ]()] - First Release Date - Possible 
 - [[ Feb 2023 ]()] - Make Distributon Plan and Library Versioning for browser with Webpack and Terser for JS minification.
@@ -392,7 +392,7 @@ _For more examples, please refer to the [Documentation](https://inferjs.com)_
 
 
 <!-- CHANGELOG -->
-## <img height="28" width="29" src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true" style="float:left;" />&nbsp;&nbsp;InferJS-Library: Change Log
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Change Log
 
 
 
@@ -403,7 +403,7 @@ See the [open issues](https://github.com/Codevendor/inferjs-library/issues) for 
 
 
 <!-- CONTRIBUTING -->
-## <img height="28" width="29" src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true" style="float:left;" />&nbsp;&nbsp;InferJS-Library: Contributing
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -421,7 +421,7 @@ Don't forget to give the project a [⭐ star](), Thanks again!
 
 
 <!-- LICENSE -->
-## <img height="28" width="29" src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true" style="float:left;" />&nbsp;&nbsp;InferJS-Library: License
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: License
 
 Distributed under the **MIT** License. See `LICENSE.txt` for more information.
 
@@ -430,9 +430,9 @@ Distributed under the **MIT** License. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
-## <img height="28" width="29" src="https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true" style="float:left;" />&nbsp;&nbsp;InferJS-Library: Support Related
- - [**InferJS-Library** Documentation](https://github.com/Codevendor/inferjs-library/) - Information documentation for the **InferJS-Library**.
- - [**InferJS-Library** Issues](https://github.com/Codevendor/inferjs-library/issues) - Direct all questions about the **InferJS-Library** here.
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Support Related
+ - [**InferJS-Library** Documentation][library-docs] - Information documentation for the **InferJS-Library**.
+ - [**InferJS-Library** Issues][library-issues] - Direct all questions about the **InferJS-Library** here.
 
 
 
