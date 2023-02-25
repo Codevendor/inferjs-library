@@ -1,0 +1,55 @@
+{
+  "name": "inferjs-library",
+  "version": "0.0.4",
+  "description": "A runtime library that allows you to infer rules for extended type checking in JavaScript.",
+  "main": "index.js",
+  "homepage": "https://inferjs.com",
+  "type": "module",
+  "devDependencies": {
+    "inferjs-compiler": "^0.0.7",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "scripts": {
+    "clean": "node bin/clean.js",
+    "build": "node bin/clean.js && node bin/build.js",
+    "test1": "node bin/build-test1-inferobject.js && node tests/test1.js"
+  },
+  "keywords": [
+    "inferjs",
+    "infer js",
+    "inferjs library",
+    "inferjs-library",
+    "type checking",
+    "type checking javascript",
+    "types",
+    "js types",
+    "javascript types",
+    "infer",
+    "infers",
+    "infer rules",
+    "infer type",
+    "infer types",
+    "expect",
+    "infer expectations",
+    "jsdoc"
+  ],
+  "author": {
+    "name": "Adam Smith",
+    "url": "https://codevendor.com/"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Codevendor/inferjs-library.git"
+  },
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=5.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Codevendor/inferjs-library/issues"
+  },
+  "engineStrict": true
+}

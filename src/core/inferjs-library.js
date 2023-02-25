@@ -8,7 +8,7 @@ import { InferExpectError, InferTypeError } from "../errors/errors.js";
  * A runtime library that allows you to infer rules for extended type checking in JavaScript.
  * @class InferJS
  */
-export class InferJSLibrary {
+export class InferJS {
 
     // Private Fields
     #inferObject = null;

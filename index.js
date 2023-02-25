@@ -9,4 +9,4 @@ export { InferTypeError } from "./src/errors/infer-type-error.js";
 export { InferUnhandledError } from "./src/errors/infer-unhandled-error.js";
 
 // Core
-export { InferJSLibrary } from "./src/core/inferjs-library.js";
+export { InferJS } from "./src/core/inferjs-library.js";
