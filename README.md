@@ -8,9 +8,9 @@
 [library-issues]: https://github.com/Codevendor/inferjs-library/issues
 [compiler-docs]: https://github.com/Codevendor/inferjs-compiler/
 [compiler-issues]: https://github.com/Codevendor/inferjs-compiler/issues
-[InferUnhandledError]: https://github.com/Codevendor/inferjs-library/blob/main/src/errors/infer-unhandled-error.mjs
-[InferTypeError]: https://github.com/Codevendor/inferjs-library/blob/main/src/errors/infer-type-error.mjs
-[InferExpectError]: https://github.com/Codevendor/inferjs-library/blob/main/src/errors/infer-expect-error.mjs 
+[unhandled-error]: https://github.com/Codevendor/inferjs-library/blob/main/src/errors/infer-unhandled-error.js
+[type-error]: https://github.com/Codevendor/inferjs-library/blob/main/src/errors/infer-type-error.js
+[expect-error]: https://github.com/Codevendor/inferjs-library/blob/main/src/errors/infer-expect-error.js 
 
 ![InferJS Library][logo]
 
@@ -172,7 +172,7 @@ foo('test', 1234, true);
 ```
 
 
-## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Type Checking with JSDoc @param
+## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Type Checking with JSDoc [@param]()
 
 The **JSDoc** tag `@param` below specifies a method's parameter type(s), name and description.
 #### Fomart for [@param](): 
