@@ -400,18 +400,6 @@ _For more examples, please refer to the [Documentation](https://inferjs.com)_
 - [[ Jan 25, 2023 ]()] - Under Development and Testing
 
 
-
-<!-- CHANGELOG -->
-## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Change Log
-
-
-
-See the [open issues][library-issues] for a full list of proposed features (and known issues).
-
-
-
-
-
 <!-- CONTRIBUTING -->
 ## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Contributing
 
