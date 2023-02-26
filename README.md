@@ -11,6 +11,8 @@
 [unhandled-error]: https://github.com/Codevendor/inferjs-library/blob/main/src/errors/infer-unhandled-error.js
 [type-error]: https://github.com/Codevendor/inferjs-library/blob/main/src/errors/infer-type-error.js
 [expect-error]: https://github.com/Codevendor/inferjs-library/blob/main/src/errors/infer-expect-error.js 
+[demo]:https://inferjs.com/demo.html
+
 
 ![InferJS Library][logo]
 
@@ -22,6 +24,8 @@
 [**InferJS**][inferjs] is provided with an [**InferJS-Compiler**][inferjs-compiler]. The compiler interprets your **JSDoc** comments from your source code and compiles them into an [**InferObject**][infer-object] file, that you can import into any **JavaScript** file. 
 
 With this library, you can also enable extended type checking and narrow down your data types with `@infer` expectation rules. Check out the examples below, to see how [**InferJS**][inferjs] can save you time and money from costly bugs through development and release.
+
+- [Live Example][demo]
 
 
 ### Built With
@@ -60,7 +64,7 @@ If you would like to use the [InferJS-Library] from the browser, please select a
 If you are missing the `dist` folder or would like to compile the latest version, follow the steps below.
 
 #### Install Webpack
-To build yourself you will need to install **Webpack version 5+** with the following commands. The commands need to be run from where the `package.json` is located. Or you can install them globally with the `-g` identifier.
+To build yourself, you will need to install **Webpack version 5+** with the following commands. The commands need to be run from where the `package.json` is located. Or you can install them globally with the `-g` identifier.
 
 #### Webpack Latest Install 
 ```sh
@@ -276,7 +280,7 @@ Below is a list of common rule expectation types:
 | [PROPS]() | Checks if object contains properties. |
 | [ARRAY-NOT-EMPTY]() | Checks if array not empty. |
 | [ARRAY-EMPTY]() | Checks if array is empty. |
-| [ARRAY-TYPES]() | Checks if array items of are of exepected types. |
+| [ARRAY-TYPES]() | Checks if array items of are of expected types. |
 | [INT8]() | Checks for INT8: `-128` to `127` |
 | [CHAR]() | ^ |
 | [UINT8]() | Checks for UINT8: `0` to `255` |
