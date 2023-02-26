@@ -3,6 +3,7 @@
 [inferjs-compiler]: https://github.com/Codevendor/inferjs-compiler
 [infer-object]: https://github.com/Codevendor/inferjs-library
 [logo]: https://github.com/Codevendor/inferjs-library/blob/main/assets/images/inferjs-logo.png?raw=true
+[header]: https://github.com/Codevendor/inferjs-library/blob/main/assets/images/git_header.png?raw=true
 [arrow]: https://github.com/Codevendor/inferjs-library/blob/main/assets/images/arrowright.png?raw=true
 [library-docs]: https://github.com/Codevendor/inferjs-library/
 [library-issues]: https://github.com/Codevendor/inferjs-library/issues
@@ -14,7 +15,7 @@
 [demo]:https://inferjs.com/demo.html
 
 
-![InferJS Library][logo]
+![InferJS Library][header]
 
 <!-- ABOUT THE PROJECT -->
 ## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Overview
