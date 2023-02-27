@@ -44,7 +44,7 @@ With this library, you can also enable extended type checking and narrow down yo
 To install the latest version of [**InferJS-Library**][inferjs-library] locally with `npm`:
 #### Install: [Locally]()
 ```sh
-npm install inferjs-library
+npm install inferjs-library --save
 ```
 
 #### Install: [Globally]()
