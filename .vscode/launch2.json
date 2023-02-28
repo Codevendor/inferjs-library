@@ -1,0 +1,201 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "PRODUCTION BUILD: InferJS-Library",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run-script", "build",
+                "--prefix", "${workspaceFolder}/projects/inferjs-library/"
+            ],
+            "env" : { "NODE_ENV" : "production" },
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "PRODUCTION BUILD: InferJS-Compiler",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run-script", "build",
+                "--prefix", "${workspaceFolder}/projects/inferjs-compiler/"
+            ],
+            "env" : { "NODE_ENV" : "production" },
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "TEST: INFERJS-COMPILER: All Tests",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/projects/inferjs-compiler/tests/test.js",
+            "args": [
+                "--test",
+                "--no-warnings"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "TEST: INFERJS-COMPILER: Parse Directory",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/projects/inferjs-compiler/tests/test-parse-dir.js",
+            "args": [
+                "--test",
+                "--no-warnings"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "TEST: INFERJS-COMPILER: Parse File List",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/projects/inferjs-compiler/tests/test-parse-file-list.js",
+            "args": [
+                "--test",
+                "--no-warnings"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "TEST: INFERJS-COMPILER: Parse File",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/projects/inferjs-compiler/tests/test-parse-file.js",
+            "args": [
+                "--test",
+                "--no-warnings"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "TEST: INFERJS-COMPILER: Parse List",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/projects/inferjs-compiler/tests/test-parse-list.js",
+            "args": [
+                "--test",
+                "--no-warnings"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "DEBUG: INFERJS-LIBRARY: Test1",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/projects/inferjs-library/tests/test1-esm.js",
+            "args": [
+                "--trace-warnings"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "DEBUG: INFERJS-COMPILER: Logger Test",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/projects/inferjs-compiler/src/core/logger.js",
+            "args": [
+                "--trace-warnings"
+            ],
+            "outputCapture": "std"
+        },
+
+
+
+
+
+
+
+
+
+        
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "InferCompiler-Launch-Test-Action-PARSE-FILE",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/projects/inferjs-compiler/src/main.js",
+            "args": [
+                "-f",
+                "--input-file=./tests/inferjs-library/test1.js",
+                "--output-file=./tests/inferjs-library/infers/test1.infer.js",
+                "--output-file-options-flag=wx",
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "InferCompiler-Launch-Test-Action-PARSE-DIR",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/projects/inferjs-compiler/src/main.js",
+            "args": [
+                "-d",
+                "--input-dir=./tests/inferjs-library",
+                "--input-dir-options-recursive=true",
+                "--output-file=./tests/inferjs-library/infers/test1.infer.js",
+                "--output-file-options-flag=wx",
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "InferCompiler-Launch-Test-Action-PARSE-LIST",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/projects/inferjs-compiler/src/main.js",
+            "args": [
+                "-a",
+                "--input-list='./tests/inferjs-library/test1.js','./tests/inferjs-library/test2.js'",
+                "--output-file=./tests/inferjs-library/infers/test1.infer.js",
+                "--output-file-options-flag=wx",
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "InferCompiler-Launch-Test-Action-PARSE-FILE-LIST",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/projects/inferjs-compiler/src/main.js",
+            "args": [
+                "-l",
+                "--input-file-list=./tests/inferjs-library/list.txt",
+                "--output-file=./tests/inferjs-library/infers/test1.infer.js",
+                "--output-file-options-flag=wx",
+            ]
+        }
+    ]
+}
