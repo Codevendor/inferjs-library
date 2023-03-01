@@ -17,6 +17,32 @@
             "env" : { "NODE_ENV" : "production" },
             "outputCapture": "std"
         },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "DEBUG: Test1 Dist Library",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/tests/test1.js",
+            "args": [
+                "--trace-warnings"
+            ],
+            "outputCapture": "std"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "DEBUG: Test2 Library",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/tests/test2.js",
+            "args": [
+                "--trace-warnings"
+            ],
+            "outputCapture": "std"
+        },
 
     ]
 

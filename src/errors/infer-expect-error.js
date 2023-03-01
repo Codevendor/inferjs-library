@@ -26,6 +26,8 @@ export class InferExpectError extends Error {
     #argValueSafe = '';
     #inferExpectationValue = '';
     #inferExpectationValueSafe = '';
+    #file = '';
+    #line = '';
 
     /** Gets the param position. */
     get paramPosition() { return this.#paramPosition; }
@@ -63,6 +65,18 @@ export class InferExpectError extends Error {
     /** Gets the inferExpectationValueSafe. */
     get inferExpectationValueSafe() { return this.#inferExpectationValueSafe; }
 
+    /** Gets the file. */
+    get file() { return this.#file; }
+
+    /** Gets the file. */
+    get file() { return this.#file; }
+
+    /** Gets the line number. */
+    get line() { return this.#line; }
+
+    /** Gets the line number. */
+    get line() { return this.#line; }
+
     /** Returns the error name. */
     get name() { return this.constructor.name }
 
@@ -94,14 +108,18 @@ export class InferExpectError extends Error {
         this.#methodSignature = this.#getMethodSignature(inferObject);
         this.#param = Object.keys(inferObject['@param'])[paramIndex];
         this.#expectedType = this.#getExpectedType(inferObject, this.#param, true);
+        this.#file = (inferObject.hasOwnProperty('file')) ? inferObject['file'] : '';
+        this.#line = (inferObject.hasOwnProperty('line')) ? inferObject['line'] : '';
 
         this.message = `Incorrect ${this.#paramPositionRepresent} parameter, failed infer expectation type check in:\n` +
+            `File: ${this.#file}\n` +
+            `Line: ${this.#line}\n` +
             `@inferid: ${this.#inferId}\n` +
             `@function: ${this.#methodSignature}\n` +
             `@param: ${this.#param}\n` +
             `Expectation Type: ${this.#inferExpectation}\n` +
             ((this.#inferExpectationValueSafe) ? `Expectation Value: ${this.#inferExpectationValueSafe}\n` : '') +
-            `Argument Value: ${this.#argValueSafe}`;
+            `Argument Value: ${this.#argValueSafe}`
 
     }
 

@@ -371,6 +371,8 @@ Below are examples of exception type responses from [**InferJS-Library**][inferj
 #### > InferTypeError Example:
 ```console
 InferTypeError: Incorrect third parameter type in:
+File: /path/to/test1.js
+Line: 14
 @inferid: foo
 @function: ( msg: <string>, id: <number>, objectTester: <object> )
 @param: objectTester
@@ -381,6 +383,8 @@ Actual Type: null
 #### > InferExpectError Example:
 ```console
 InferExpectError: Incorrect first parameter, failed infer expectation type check in:
+File: /path/to/test1.js
+Line: 14
 @inferid: foo
 @function: foo( msg: <string|number|null>, id: <number|string>, send: <boolean> )
 @param: msg
@@ -397,12 +401,7 @@ _For more examples, please refer to the [Documentation](https://inferjs.com)_
 
 
 
-<!-- ROADMAP -->
-## ![Heading][arrow]&nbsp;&nbsp;InferJS-Library: Roadmap
-- [[ April 2023 ]()] - Create a plan for text localization with the **InferJS-Library** repo.
-- [[ March 2023 ]()] - First Release Date - Possible 
-- [[ Feb 2023 ]()] - Make Distributon Plan and Library Versioning for browser with Webpack and Terser for JS minification.
-- [[ Jan 25, 2023 ]()] - Under Development and Testing
+
 
 
 <!-- CONTRIBUTING -->
