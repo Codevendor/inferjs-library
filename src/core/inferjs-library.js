@@ -35,7 +35,7 @@ export class InferJS {
      * @param {*} inferObject - The inferObject compiled by the InferJS-Compiler.
      */
     constructor1(inferObject) {
-        
+
         this.#inferObject = inferObject;
 
     }
@@ -51,7 +51,7 @@ export class InferJS {
 
         // Check for overload
         if (type_of(src, true) === 'arguments') {
-            
+
             // Check Method
             return this.#checkMethod(inferId, src, returnException);
 
@@ -114,10 +114,15 @@ export class InferJS {
                 const argType = type_of(argValue);
                 const argTypeExt = type_of(argValue, true);
 
-                // Check if type exists
-                if (!allowedTypes.hasOwnProperty(argType) && !allowedTypes.hasOwnProperty(argTypeExt, true)) {
-                    if (!returnException) throw new InferTypeError(inf, i, argType + '|' + argTypeExt);
-                    return new InferTypeError(inf, i, argType + '|' + argTypeExt);
+                // Check if any bypass
+                if (!allowedTypes.hasOwnProperty('any') && !allowedTypes.hasOwnProperty('*')) {
+
+                    // Check if type exists
+                    if (!allowedTypes.hasOwnProperty(argType) && !allowedTypes.hasOwnProperty(argTypeExt, true)) {
+                        if (!returnException) throw new InferTypeError(inf, i, argType + '|' + argTypeExt);
+                        return new InferTypeError(inf, i, argType + '|' + argTypeExt);
+                    }
+
                 }
 
                 // Get unique actual types
