@@ -110,7 +110,7 @@ Add both to your webpage for type checking. You only need to recompile with the 
 
 Below are examples for using [**InferJS-Library**][inferjs-library] in your code.
 
-#### Brower ESModule Import Example - Client side
+#### Browser ESModule Import Example - Client side
 ```html
 <script type="module">
   import { InferObject } from "./inferobject.js";
