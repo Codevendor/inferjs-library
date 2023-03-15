@@ -214,6 +214,7 @@ Below is a list of `standard` and `extended types` that can be checked:
 | [symbol]() | A symbol type: `Symbol` |
 | [function]() | A function type: `function` |
 | **Extended InferJS Types** | **Description** |
+| [any]() | Allows Any type: `any` or `*` |
 | [array]() | An array type: `[]` |
 | [infinity]() | An infinity number type: `Infinity` |
 | [nan]() | Not a number type: `NaN` |
