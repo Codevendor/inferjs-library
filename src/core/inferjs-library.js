@@ -83,7 +83,7 @@ export class InferJS {
     #checkMethod(inferId, args, returnException = false) {
 
         // Check if inferid exists or through error
-        if (type_of(this.#inferObject) !== 'object' || type_of(this.#inferObject.infers) !== 'object' || !this.#inferObject.infers.hasOwnProperty(inferId)) {
+        if (type_of(this.#inferObject) !== 'object' || type_of(this.#inferObject.methods) !== 'object'  || type_of(this.#inferObject.methods.infers) !== 'object' || !this.#inferObject.methods.infers.hasOwnProperty(inferId)) {
 
             const err = new TypeError(`Cannot find infer with inferid: ${inferId}`);
             if (!returnException) throw err;
@@ -91,7 +91,10 @@ export class InferJS {
         }
 
         // Convert infer to inf for shorthand
-        const inf = this.#inferObject.infers[inferId];
+        const inf = this.#inferObject.methods.infers[inferId];
+        
+        // Set inferid
+        inf["@inferid"] = inferId;
 
         // Check if has @param
         if (inf.hasOwnProperty('@param')) {
@@ -134,7 +137,7 @@ export class InferJS {
 
                     if (allowedTypes.hasOwnProperty(actualType)) {
 
-                        const infers = allowedTypes[actualType].infers;
+                        const infers = allowedTypes[actualType].expects;
                         const infersArray = Object.keys(infers);
 
                         for (let i3 = 0; i3 < infersArray.length; i3++) {
