@@ -6,7 +6,7 @@
   "homepage": "https://inferjs.com",
   "type": "module",
   "devDependencies": {
-    "inferjs-compiler": "^0.0.8",
+    "inferjs-compiler": "^0.0.9",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   },
