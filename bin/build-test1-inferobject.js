@@ -26,8 +26,11 @@ for (let i = 0; i < keys.length; i++) {
 
 // Set command to exec for compiling InferObject
 const compiler = `node ${paths['compiler']}`;
-const cmd = `inferjs-compiler -f ${paths['input']} --output-options-flags='w' --output-options-module='esm' -o ${paths['output']}`;
+const cmd = `${compiler} -f ${paths['input']} --output-options-flags='w' --output-options-module='esm' -o ${paths['output']}`;
+//const cmd = `inferjs-compiler -f ${paths['input']} --output-options-flags='w' --output-options-module='esm' -o ${paths['output']}`;
 
+//console.log(cmd);
+//process.exit();
 
 // Execute compiler to build inferobject for test1
 exec(cmd, (error, stdout, stderr) => {

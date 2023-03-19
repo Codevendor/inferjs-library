@@ -1,12 +1,12 @@
 {
   "name": "inferjs-library",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A runtime library that allows you to infer rules for extended type checking in JavaScript.",
   "main": "index.js",
   "homepage": "https://inferjs.com",
   "type": "module",
   "devDependencies": {
-    "inferjs-compiler": "^0.0.8",
+    "inferjs-compiler": "^0.0.9",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   },

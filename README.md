@@ -110,7 +110,7 @@ Add both to your webpage for type checking. You only need to recompile with the 
 
 Below are examples for using [**InferJS-Library**][inferjs-library] in your code.
 
-#### Brower ESModule Import Example - Client side
+#### Browser ESModule Import Example - Client side
 ```html
 <script type="module">
   import { InferObject } from "./inferobject.js";
@@ -214,6 +214,7 @@ Below is a list of `standard` and `extended types` that can be checked:
 | [symbol]() | A symbol type: `Symbol` |
 | [function]() | A function type: `function` |
 | **Extended InferJS Types** | **Description** |
+| [any]() | Allows Any type: `any` or `*` |
 | [array]() | An array type: `[]` |
 | [infinity]() | An infinity number type: `Infinity` |
 | [nan]() | Not a number type: `NaN` |

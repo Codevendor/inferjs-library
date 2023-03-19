@@ -1,5 +1,5 @@
 import { InferObject } from "./inferobjects/test1.io.js";
-import { InferJS } from "../dist/latest/ver-0-0-4/esmodule/inferjs-0.0.4.min.js";
+import { InferJS } from "../src/core/inferjs-library.js";
 const inferjs = new InferJS(InferObject);
 
 /**
@@ -28,4 +28,4 @@ function foo(msg, id, send) {
 }
 
 // Example Normal Call
-console.log(foo('test', '-1234', true));
+console.log(foo('test', -1234, true));

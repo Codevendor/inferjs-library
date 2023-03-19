@@ -18,6 +18,7 @@ export class InferExpectError extends Error {
     #expectedType = '';
     #paramPositionRepresent = '';
     #method = '';
+    #methodName = '';
     #inferId = '';
     #methodSignature = '';
     #param = '';
@@ -40,6 +41,9 @@ export class InferExpectError extends Error {
 
     /** Gets the method name from @function. */
     get method() { return this.#method; }
+
+    /** Gets the method name from actual code. */
+    get methodName() { return this.#methodName; }
 
     /** Gets the inferId from @inferid. */
     get inferId() { return this.#inferId; }
@@ -105,6 +109,7 @@ export class InferExpectError extends Error {
         this.#inferId = (inferObject.hasOwnProperty('@inferid')) ? inferObject['@inferid'] : 'Unknown';
         this.#paramPositionRepresent = numberRepresent(this.#paramPosition);
         this.#method = (inferObject.hasOwnProperty('@function')) ? inferObject['@function'] : '';
+        this.#methodName = (inferObject.hasOwnProperty('name')) ? inferObject['name'] : '';
         this.#methodSignature = this.#getMethodSignature(inferObject);
         this.#param = Object.keys(inferObject['@param'])[paramIndex];
         this.#expectedType = this.#getExpectedType(inferObject, this.#param, true);
@@ -195,7 +200,12 @@ export class InferExpectError extends Error {
     #getMethodSignature(inferObject) {
 
         // Variables
-        let sig = (inferObject.hasOwnProperty('@function')) ? inferObject['@function'] + '( ' : '( ';
+        //let sig = (inferObject.hasOwnProperty('@function')) ? inferObject['@function'] + '( ' : '( ';
+
+        let sig = '';
+        if (inferObject.hasOwnProperty('name')) { sig = inferObject['name'] + '( ' };
+        if (inferObject.hasOwnProperty('@function')) { sig = inferObject['@function'] + '( ' };
+        if (sig === '') { sig = '( '; }
 
         if (inferObject.hasOwnProperty('@param')) {
 
